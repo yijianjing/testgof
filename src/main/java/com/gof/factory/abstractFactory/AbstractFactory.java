@@ -1,4 +1,4 @@
-package com.gof.factory;
+package com.gof.factory.abstractFactory;
 
 /**
  * Created by shinho on 2018/10/18.

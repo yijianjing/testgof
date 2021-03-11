@@ -10,6 +10,7 @@ public class LoginForSinaAdapter implements LoginAdapter {
         return adapter instanceof LoginForSinaAdapter;
     }
     public ResultMsg login(String id, Object adapter) {
+        System.out.println("LoginForSinaAdapter");
         return null;
     }
 }

@@ -11,6 +11,7 @@ public class LoginForQQAdapter implements LoginAdapter {
     }
 
     public ResultMsg login(String id, Object adapter) {
+        System.out.println("qq");
         return null;
     }
 }

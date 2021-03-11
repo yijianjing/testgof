@@ -16,6 +16,7 @@ public class SiginService {
      * @return
      */
     public ResultMsg regist(String username, String password){
+        System.out.println("注册成功");
         return  new ResultMsg(200,"注册成功",new Member());
     }
 
@@ -27,6 +28,7 @@ public class SiginService {
      * @return
      */
     public ResultMsg login(String username,String password){
+        System.out.println("登录成功");
         return null;
     }
 

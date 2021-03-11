@@ -10,6 +10,7 @@ public class LoginForTelAdapter implements LoginAdapter {
         return adapter instanceof LoginForTelAdapter;
     }
     public ResultMsg login(String id, Object adapter) {
+        System.out.println("LoginForTelAdapter");
         return null;
     }
 }

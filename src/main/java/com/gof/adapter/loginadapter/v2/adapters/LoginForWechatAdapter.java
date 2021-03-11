@@ -10,6 +10,7 @@ public class LoginForWechatAdapter implements LoginAdapter {
         return adapter instanceof LoginForWechatAdapter;
     }
     public ResultMsg login(String id, Object adapter) {
+        System.out.println("LoginForWechatAdapter");
         return null;
     }
 }

@@ -11,6 +11,7 @@ public class RegistForQQAdapter implements RegistAdapter,LoginAdapter {
     }
 
     public ResultMsg login(String id, Object adapter) {
+        System.out.println("RegistForQQAdapter");
         return null;
     }
 }

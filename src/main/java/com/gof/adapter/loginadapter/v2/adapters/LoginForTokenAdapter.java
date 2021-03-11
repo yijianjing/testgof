@@ -10,6 +10,7 @@ public class LoginForTokenAdapter implements LoginAdapter {
         return adapter instanceof LoginForTokenAdapter;
     }
     public ResultMsg login(String id, Object adapter) {
+        System.out.println("LoginForTokenAdapter");
         return null;
     }
 }

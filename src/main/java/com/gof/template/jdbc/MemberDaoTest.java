@@ -3,14 +3,7 @@ package com.gof.template.jdbc;
 
 import com.gof.template.jdbc.dao.MemberDao;
 
-import javax.sql.DataSource;
-import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
 import java.util.List;
-import java.util.logging.Logger;
-
 /**
  * Created by Tom.
  */

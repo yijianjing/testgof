@@ -2,7 +2,7 @@ package com.gof.adapter.loginadapter.v2;
 
 import com.gof.adapter.loginadapter.ResultMsg;
 import com.gof.adapter.loginadapter.v1.SiginService;
-import com.gof.adapter.loginadapter.v2.adapters.LoginAdapter;
+import com.gof.adapter.loginadapter.v2.adapters.*;
 
 /**
  * @author jianjun
@@ -11,39 +11,39 @@ import com.gof.adapter.loginadapter.v2.adapters.LoginAdapter;
  */
 public class PassportForThirdAdapter extends SiginService implements IPassportForThird {
     public ResultMsg loginForQQ(String id) {
-        return null;
+//        return processLogin(id,RegistForQQAdapter.class);
+        return processLogin(id, LoginForQQAdapter.class);
     }
 
     public ResultMsg loginForWechat(String id) {
-        return null;
+        return processLogin(id, LoginForWechatAdapter.class);
     }
 
     public ResultMsg loginForToken(String token) {
-        return null;
+        return processLogin(token, LoginForTokenAdapter.class);
     }
 
     public ResultMsg loginForTelphone(String telphone, String code) {
-        return null;
+        return processLogin(telphone, LoginForTelAdapter.class);
     }
 
     public ResultMsg loginForRegist(String username, String passport) {
-        return null;
+        super.regist(username,passport);
+        return super.login(username,passport);
     }
 
     private ResultMsg processLogin(String key,Class<? extends LoginAdapter> clazz){
+        try{
+            //适配器不一定要实现接口
+            LoginAdapter adapter = clazz.newInstance();
 
-        try {
-            LoginAdapter adapter=clazz.newInstance();
+            //判断传过来的适配器是否能处理指定的逻辑
             if(adapter.support(adapter)){
                 return adapter.login(key,adapter);
             }
-        } catch (InstantiationException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
+        }catch (Exception e){
             e.printStackTrace();
         }
         return null;
-
-
     }
 }

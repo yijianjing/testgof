@@ -13,7 +13,7 @@ public class Leader implements IEmployee{
     private Map<String,IEmployee> targets = new HashMap<String,IEmployee>();
 
     public Leader() {
-        targets.put("a",new EmployeeA());
+        targets.put("mouseevent",new EmployeeA());
         targets.put("b",new EmployeeB());
     }
 
